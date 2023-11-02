@@ -9,14 +9,111 @@
 <body>
 
 	<h1>Stylování formulářů</h1>
-
-
+  
+	<form action="https://formular.itgirls.cz" method="post"></form>
 	<!-- Label a pole pod sebou -->
 
+	
+	<div class="form-field">
+	<label for="name">Jméno</label>
+	<input type="text" name="jmeno" id="jmeno" placeholder="">
+	</div>
 
+	<div class="form-field">
+	<label for="prijmeni">Příjmení<span class="required">*</span></label> 
+	<input type="text" name="prijmeni" id="prijmeni" required placeholder="">
+	</div>
+
+	<div class="form-field">
+		<label for="email">E-mail</label>
+		<input type="text" name="email" id="email" required placeholder="">
+		</div>
+
+	<div class="form-field">
+		<label for="prezdivka">Přezdívka</label>
+		<input type="text" name="prezdivka" id="prezdivka" placeholder="">
+		</div>
+
+	<div class="form-field">
+	<label for="vek">Věk</label>
+	<input type="number" name="vek" id="vek" placeholder="">
+	</div>
+
+	 <div class="form-field">
+		<label for="adresa">Adresa</label>
+		<textarea name="adresa" id="adresa"  rows="5" placeholder=""></textarea>	
+	</div>
+	
+
+<div class="form-field">
+<label>Oblíbené ovoce</label>
+
+<div class="form-radio">
+ <input type="radio" name="ovoce" id="ovoce1" value="jablko">
+ <label for="ovoce1">Jablko</label>
+</div>
+
+<div class="form-radio">
+ <input type="radio" name="ovoce" id="ovoce2" value="hruska">
+ <label for="ovoce2">Hruška</label>
+</div>
+	
+<div class="form-radio">
+ <input type="radio" name="ovoce" id="ovoce3" value="meloun">
+ <label for="ovoce3">Meloun</label>
+</div>
+
+<div class="form-radio">
+	<input type="radio" name="ovoce" id="ovoce4" value="pomeranc">
+	<label for="ovoce4">Pomeranč</label>
+   </div>
+
+   <div class="form-radio">
+	<input type="radio" name="ovoce" id="ovoce5" value="broskev">
+	<label for="ovoce5">Broskev</label>
+   </div>
+</div>
+
+<div class="form-field">
+<label for="mesto">Město</label>
+<select name="mesto" id="mesto">
+<option value="praha">Praha, hlavní město</option>
+<option value="brno">Brno, hlavní vesnice</option>
+<option value="ostrava">Ostrava...meh</option>
+</select>
+</div>
+
+
+
+
+<div class="form-checkbox">
+	<label for ="souhlas">Souhlasím se zpracováním osobních údajů.</label>
+	<input type="checkbox" name="souhlas" id="souhlas"
+	value="Ano">
+</div>
+	
+	
+	
+
+		
+	
+	
+	
+
+	
 
 	<!-- Label a pole vedle sebe -->
 
+
+	<!--<div class="form-horizontal">
+		<label for="prezdivka">Přezdívka</label>
+		<input type="text" name="prezdivka" id="prezdivka">
+	
+		</div>-->
+	
+
+	
+	
 
 
 
@@ -49,7 +146,8 @@
 		Stylování stavů formulářového pole
 		- :focus, :valid, :invalid, :placeholder-shown
 	-->
-
+	<hr>
+	<button type="submit" class="button">OK</button>
 
 </body>
 </html>
