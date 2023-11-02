@@ -14,14 +14,17 @@
 		Formulář
 		action: adresa, kam se odesílají data
 		method: jakým způsobem se odesílají
-			- GET: jako součást adresy, omezené množství dat (max 2048 znaků)
-			- POST: "skrytě", bez omezení velikosti
+			- GET: jako součást adresy, omezené množství dat (max 2048 znaků) - např se hodí u formulářového 
+			prvku na hledání
+			- POST: "skrytě", bez omezení velikosti, nejsou v adrese, údaje nejsou na první pohled
+			vidět
+			https://www.google.com/search?q=dog jako když do google napíšeme : dog
 
 		Zkusíme formulář odesílat na adresu:
 		http://formular.itgirls.cz
 	-->
 
-
+	<form action="http://formular.itgirls.cz" method="post">
 
 		<!--
 			INPUT
@@ -31,21 +34,42 @@
 			value: výchozí hodnota
 			size: velikost textového pole, cca počet znaků (ale jde zadat víc)
 			maxlength: max. délka, která jde zadat
-			placeholder: nápověda, když je pole prázdné
-			autofocus ... automaticky se "zaostří" při načtení stránky
+			placeholder: nápověda, když je pole prázdné, není to označení pole
+			autofocus ... automaticky se "zaostří" při načtení stránky, do pole můžeme hned psát,
+			 je v něm kurzor
 			disabled  ... vypnuté pole (neodesílá se na server)
 			readonly  ... jen pro čtení, nejde do něj psát, ale hodnota se odešle na server
 			required  ... povinné pole, kontroluje prohlížeč při pokusu o odeslání
 		-->
 
+		<fieldset>
 
+			<legend>Osobní údaje</legend>
+			
+		<label for="jmeno">Jméno</label>
+		<input 
+		type="text" 
+		name="jmeno" 
+		id="jmeno" 
+		size="15" 
+		maxlength="15"
+		placeholder="Křestní jméno"
 
-		<!--
+		autofocus
+		required
+		>
+		<hr>
+		<!-- prvni způsob - label může být od pole daleko, propojuje je "for"
 			LABEL - popisek formulářového pole
 			for: id formulářového prvku, pro který je toto popisek
 		-->
+			<label>
+				Příjmení
+			<input type="text" name="prijmeni"  id="prijmeni" required>
+			</label>
+		<hr>
 
-
+	</fieldset>
 
 		<!--
 			Tlačítko - lze vytvořit dvěma způsoby
@@ -68,8 +92,9 @@
 			Jen pro INPUT:
 			value: text na tlačítku
 		-->
+		<!--<input type="submit" name="tlacitko" value="Odeslat">-->
 
-
+		<button type="submit" name="tlacitko">Odeslat jako button</button>
 
 		<!--
 			Další typy vstupních polí:
@@ -79,41 +104,76 @@
 		<!--
 			NUMBER - číslo
 			Další atributy: min, max, step
+			na mobilu se zobrazí klávesnice s čísly
 		-->
 
+		<hr>
+		
+		<label for="cislo">Číslo</label>
+		<input 
+		type="number" 
+		name="cislo" 
+		id="cislo" 
+		value="10" 
+		min="0" 
+		ax="100"> 
+		<!--step="5"-->
 
 		<!--
 			EMAIL - emailová adresa
 			URL - webová adresa
+			na mobilu zobrazí klávesnici s @
+			
 		-->
+		<hr>
 
+		<label for="email" >E-mail</label> 
+		<input type="email" name="email" id="email">
 
 		<!--
 			TEL - telefonní číslo
 			Občas se používá záměrně "nesprávně" pro zadávání čísel,
 			protože na mobilu většinou zobrazí klávesnici pouze s číslicemi 0-9.
 		-->
+		<label for="telefon">Telefon</label>
+		<input type="tel" name="telefon" id="telefon">
 
+		<hr>
 
 		<!--
 			DATE - datum
 			DATETIME-LOCAL - datum a čas
+			odešle se ve standartizovaném iso formátu 2020-10-24T15:06
+			je stejný ve všech jazykových prostředích
 		-->
 
+		<label for="datum" >Datum</label> 
+		<input type="datetime-local" name="datum" id="datum">
+
+		<hr>
 
 		<!--
 			PASSWORD - heslo
 			zobrazuje hvězdičky místo textu
 		-->
-
+		<label for="heslo">Heslo</label>
+		<input type="password" name="heslo" is="heslo">
 
 		<!--
 			HIDDEN - skryté pole
 			Jeho hodnota value="..." se odesílá na server,
 			ale pole na stránce není vidět.
+		
 		-->
+		<hr>
 
+		<input type="hidden" name="skryte" value="kokos a melounek">
 
+		<hr>
+
+		<input type="color" name="barva">
+
+		<hr>
 
 
 		<!--
@@ -124,7 +184,17 @@
 			cols: počet písmen na řádek
 			maxlength: max. počet znaků, která jdou zadat
 		 -->
+		 <hr>
 
+		 <label for="adresa">Bydliště</label>
+		 <textarea name="adresa" id="adresa" cols="30" rows="10"
+		 maxlength="20"
+		 placeholder="Trvalé bydliště"
+		 >Ulice 5
+Mestecko nad Rekou 
+123 45</textarea>
+
+		 <hr>
 
 
 		<!--
@@ -137,8 +207,9 @@
 			disabled, required
 		-->
 
-
-
+		<input type="checkbox" name="souhlas" id="souhlas" value="ano" required>
+		<label for="souhlas">Souhlasím s obchodními podmínkami.</label>
+		
 		<!--
 			RADIO - přepínače (jen jeden ze skupiny může být vybraný)
 			<input type="radio">
@@ -154,12 +225,26 @@
 			disabled, required
 		-->
 
+		<hr>
 
+		<!--<label>Vyber své oblíbené ovoce:</label>-->
 
+		<fieldset>
+		<legend>Oblíbené ovoce</legend>
 
+		<input type="radio" name="ovoce" id="ovoce1" value="jablko">
+		<label for="ovoce1">jablko</label>
 
-		<!--
-			SELECT - roletka, výběr z možností
+		<input type="radio" name="ovoce" id="ovoce2" value="jahoda">
+		<label for="ovoce2">jahoda</label>
+
+		<input type="radio" name="ovoce" id="ovoce3" value="meloun">
+		<label for="ovoce3">meloun</label>
+
+	</fieldset>
+		<hr>
+
+		<!--select - roletka, výběr z možností
 			<select>
 				<option>...</option>
 			</select>
@@ -171,9 +256,21 @@
 
 			Atributy option:
 			value: hodnota, která se při výběru odešle na server
-			selected ... výchozí vybraná hodnota
-		-->
+			selected ... výchozí vybraná hodnota-->
+		
 
+			<label for="mesto">Město</label>
+
+			<select name="mesto" id="mesto">
+				<option></option>
+				<option value="18000">Praha-8</option>
+				<option value="62800">Brno - Lesná</option>
+				<option value="70200" selected>Ostrava - Poruba</option>
+
+			</select>
+
+			<hr>
+			 
 
 
 
@@ -187,5 +284,7 @@
 
 
 
+
+	</form>
 </body>
 </html>
