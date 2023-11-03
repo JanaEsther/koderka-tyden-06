@@ -17,19 +17,70 @@ zelená na tlačítko		#2ecc71
 */
 
 form{
-	width:100%;
+	width: 100%;
 	max-width:300px;
 	border:0;
-	border-radius: 4px;
+	border-radius: 0 0 10px 10px;
 	background-color: white;
-	}
-
-.prihlaseni{
-	padding: 10px 20px;
-	background-color:#e74c3c;
-	color: white;
-	border-radius: 4px 4px 0 0;
-	font-size: 32px;
+	padding: 20px;
 	
 }
 
+.prihlaseni{
+	background-color:#e74c3c;
+	border-radius: 10px 10px 0 0;
+	width: 300px;
+}
+
+h1{
+	color:white;
+	margin:0;
+	padding: 10px 20px;
+	font-size: 25px;
+	font-weight: 500;
+}
+
+
+form-field{
+	display: block;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: grey;
+	padding-bottom: 5px;
+
+}
+
+form field label{
+	color: gray;
+
+}
+
+
+form-field input[type="email"],
+form-field input[type="password"]{
+	width:100%; 
+	font-size: 16px;
+ 	padding:  10px;
+	border: 1px solid rgb(231, 230, 230);
+	border-radius: 4px;
+
+}
+
+.button{
+	font-size: 16px;
+	border-radius: 4px;
+	border:0;
+	background-color:#2ecc71;
+	color:white;
+	padding: 10px 20px;
+	width:100%;
+
+}
+
+.heslo {
+	display:block;
+	font-size: 13px;
+	color:blue;
+	padding-top: 10px;
+	text-align: center;
+}

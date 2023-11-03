@@ -28,10 +28,11 @@ margin-bottom: 10px;
 /* > - selektor typu přímý potomek, label uvnitř formfieldu ale už není uvnitř
 ničeho jiného*/
 
-.form-field > label{
+.form-field{
 	display: block;
 	font-size: 14px;
 	color:gray;
+	padding-bottom: 5px;
 }
 
 .form-field input[type="text"],
