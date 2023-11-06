@@ -7,3 +7,31 @@ body {
 }
 
 /* ---------------------------- */
+
+.pes{
+	fill:silver;
+	stroke:black;
+	stroke-width: 2px;
+}
+
+.pes:hover{
+	fill:red;
+}
+
+.button{
+	color:blue;
+}
+
+button:hover{
+	color:hotpink;
+
+}
+
+.button-primary{
+	background-color: red;
+	color:white;
+}
+
+/*.button-primary{
+	background-color:currentColor;
+}*/

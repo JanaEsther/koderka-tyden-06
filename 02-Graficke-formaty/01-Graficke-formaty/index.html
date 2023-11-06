@@ -12,8 +12,9 @@
 
 		BITMAPY vs. VEKTORY
 		-------------------
-
+		
 		Tzv. bitmapové obrázky formáty, které v nějaké podobě uchovávají informace o tom, jak je barevný každý pixel v obrázku. Používáme typicky na fotky.
+		Nevýhodou je, že zabírají hodně místa. Nejdou dobře zvětšovat.
 		Při zvětšení nad originánlní velikost jsou fotky neostré, rozmazané, kostičkované.
 		- Adobe Photoshop
 		- Gimp - https://www.gimp.org/
@@ -29,13 +30,14 @@
 
 		JPEG (bitmapový formát)
 		Nejběžnější formát. Ztrátová komprese - čím menší datový objem chceme, tím nížší je kvalita obrázku. Ve fotce jsou tzv. artefakty.
+		Odebere určitá data podle algoritmů, tak že náš mozek to nepozná.
 		Hodí se na fotky. Nehodí se na ilustrace, čárovou grafiku, obrázky s textem.
 		Neumí průhlednost.
 
 		GIF (bitmapový formát)
 		Starý, indexované barvy (max. 256), nehodí se na fotky.
 		Umí průhlednost, ale pouze 1-bitovou (tzn. pixel je buď zcela průhledný nebo ne).
-		Animované GIFy.
+		Animované GIFy - jediný důvod použití dnes.
 
 		PNG (bitmapový formát)
 		Podobný GIFu, ale modernější.
@@ -58,8 +60,34 @@
 		Vektorový formát.
 		Ideální na loga, ikony, ilustrace, technickou grafiku, schémata.
 
-	-->
+	--> 
+    <img src="images/logo/logo.svg " width="274" heigth="80" alt="Logo">
 
+	<!--Výběr obrázků na web:
+		1/ V jaké velikosti - má pokrýt největší velikost jakou obrázek může na stránce mít.
+		 např.je ve sloupci, který má 600px. stačí fotka 600px na tabletu budeme potřebovat 900px.
+		Běžný monitor 1920x580 , stačí max 1600 - 1200 px - obrázek na pozadí celé stránky.
+
+		2/V jakém formátu - hodí JPEG na fotky nebo PNG. V PNG je to moc velké. 
+		JPEG je oproti PNG poloviční i 100% JPEG. JPEG s nulovou kvalitou je 17x menší. 
+
+		3/ V jaké kvalitě
+		Začneme na 50%, pokud tam nesjsou chyby, můžeme ubrat. 
+		Když uvidíme chyby můžeme přidat. Uspoříme místo.
+
+		gimp - škálovat obrázek
+		v menu - export as
+		dole - zvolte typ přípony souboru
+		zvolíme kvalitu, 
+		zobrazit náhled v okne obrázku
+		webp - alfa kvality -průhlednost
+
+
+		
+	
+	
+	
+	-->
 
 
 </body>
