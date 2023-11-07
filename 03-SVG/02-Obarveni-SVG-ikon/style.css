@@ -9,9 +9,9 @@ body {
 /* ---------------------------- */
 
 .pes{
-	fill:silver;
+	fill:pink;
 	stroke:black;
-	stroke-width: 2px;
+	stroke-width: 5px;
 }
 
 .pes:hover{
@@ -22,6 +22,10 @@ body {
 	color:blue;
 }
 
+.button:active{
+	color:greenyellow;
+}
+
 button:hover{
 	color:hotpink;
 
@@ -30,6 +34,25 @@ button:hover{
 .button-primary{
 	background-color: red;
 	color:white;
+}
+
+.button-primary span {
+	background-color: currentColor;
+}
+
+.listecek:hover{
+fill: green;
+opacity: 1;
+}
+
+.listecek:hover .list{
+	fill:green;
+	opacity:1;
+}
+
+.listecek:hover .stonek{
+	fill:burlywood;
+
 }
 
 /*.button-primary{
